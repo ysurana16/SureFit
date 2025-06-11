@@ -5,3 +5,4 @@ pandas
 plotly==6.0.0
 pydot==3.0.4
 streamlit==1.42.2
+ls ~/.ssh

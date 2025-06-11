@@ -20,6 +20,7 @@ def recommend_sizes_with_risk(currentChart, referenceChart, referenceSize, garme
         'dress': {'bust': 0.3, 'shoulder': 0.2, 'waist': 0.3, 'hip': 0.2},
         'pant': {'bust': 0.1, 'shoulder': 0.1, 'waist': 0.4, 'hip': 0.4},
         'skirt': {'bust': 0.0, 'shoulder': 0.0, 'waist': 0.5, 'hip': 0.5},
+        'footwear': {'footlength': 1.0}
     }
     weights = priority_weights.get(garmentType.lower(), {})
     if not weights:
@@ -46,7 +47,6 @@ def recommend_sizes_with_risk(currentChart, referenceChart, referenceSize, garme
                 if pd.isna(row[col]) or pd.isna(referenceMeasurements[col]):
                     continue
                 diff = abs(row[col] - referenceMeasurements[col])
-                print(diff)
                 weighted_diff = weights[col] * diff
                 total_difference += weighted_diff
 
