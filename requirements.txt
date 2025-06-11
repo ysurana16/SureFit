@@ -1,0 +1,7 @@
+ipykernel==6.29.5
+ipython==8.31.0
+numpy==1.26.4
+pandas
+plotly==6.0.0
+pydot==3.0.4
+streamlit==1.42.2
